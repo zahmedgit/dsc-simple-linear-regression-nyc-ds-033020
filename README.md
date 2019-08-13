@@ -32,7 +32,7 @@ We can use a linear regression analysis here to predict foot size (dependent var
 
 ### Why "linear" regression?
 
-As you learned in previous lesson, the term **linear** implies that the model functions along with a straight (or nearly straight) line. **Linearity**, one of the assumptions of this approach, suggests that the relationship between dependent and independent variable can be expressed as a straight line. 
+The term **linear** implies that the model functions along with a straight (or nearly straight) line. **Linearity**, one of the assumptions of this approach, suggests that the relationship between dependent and independent variable can be expressed as a straight line. 
 
 **Simple Linear Regression** uses a single feature (one independent variable) to model a linear relationship with a target (the dependent variable) by fitting an optimal model (i.e. the best straight line) to describe this relationship.  
 
@@ -46,27 +46,25 @@ This line can then be used to describe the data and conduct further experiments 
 
 ## Calculating Regression Coefficients: Slope and Intercepts
 
-As seen in the previous lesson, you remember that a straight line can be written as :
+A straight line can be written as :
 
 $$y=mx+c$$
 or, alternatively
 
 $$y =  \beta_0+ \beta_1 x $$
 
-You may come across other ways of expressing this straight line equation for simple linear regression. Yet there are **four key components** you'll to keep in mind: 
+You may come across other ways of expressing this straight line equation for simple linear regression. Yet there are **four key components** you'll want to keep in mind: 
 
-<img src="images/linreg.png" width="650">
+<img src="images/linreg.png" width="650"> 
 
-A quick recap: 
-
-* a **dependent variable** that needs to estimated and predicted (here: $y$) 
+* A **dependent variable** that needs to estimated and predicted (here: $y$) 
 * An **independent variable**, the input variable (here: $x$)
 * The **slope** which determines the angle of the line. Here, the slope is denoted as $m$, or $\beta_1$.
 * The **intercept** which is the constant determining the value of $y$ when $x$ is 0. We denoted the intercept here as $c$ or $\beta_0$.
 
 >_Slope_ and _Intercept_ are the **coefficients** or the **parameters** of a linear regression model. Calculating the regression model simply involves the calculation of these two values. 
 
-**Linear regression is simply a manifestation of this simple equation!** So this is as complicated as our linear regression model gets. The equation here is the same one used to find a line in algebra, but in statistics, the actual data points don't actually lie on a line!
+**Linear regression is simply a manifestation of this simple equation!** So this is as complicated as our linear regression model gets. The equation here is the same one used to find a line in algebra, but in statistics, the actual data points don't necessarily lie on a line!
 
 
 >The real challenge for regression analysis is to fit a line, out of an infinite number of lines that best describes that data.
@@ -91,9 +89,9 @@ differences for the x-value and the y-value for that part of the line, and divid
 
 Now that you know how the slope and intercept define the line, it's time for some more notation.
 
-Looking at the above plots, you know that you have the blue diamonds there are our observations with associated x- and y-values. 
+Looking at the above plots, you know that you have the green dots that are our observations associated with x- and y-values. 
 
-Now, when we draw our regression line based on these few blue diamonds, we use the following notations:
+Now, when we draw our regression line based on these few green dots, we use the following notations:
 
 
 $$\hat{y}=\hat m x+ \hat{c}$$ or 
@@ -101,7 +99,7 @@ $$\hat y =  \hat \beta_0+ \hat \beta_1 x $$
 
 As you can see, you're using a "hat" notation which stands for the fact that we are working with **estimations**.
 - When trying to draw a "best fit line", you're **estimating** the most appropriate value possible for your intercept and your slope, hence $\hat{c}$ /$ \hat \beta_0 $ and  $\hat{m}$ /$ \hat \beta_1 $.
-- Next, when we use our line to predict new values $y$ given $x$, your estimate is an **approximation** based on our estimated parameter values. Hence we use $\hat y $ instead of $y$. $\hat y$ lies _ON_ your regression line, $y$ is the associated y-value for each of the blue diamonds in the plot below. The **error** or the **vertical offset** between the line and the actual observation values is denoted by the red vertical lines in the plot above. Mathematically, the vertical offset can be written as $\mid \hat y - y\mid$.
+- Next, when we use our line to predict new values $y$ given $x$, your estimate is an **approximation** based on our estimated parameter values. Hence we use $\hat y $ instead of $y$. $\hat y$ lies _ON_ your regression line, $y$ is the associated y-value for each of the green dots in the plot above. The **error** or the **vertical offset** between the line and the actual observation values is denoted by the red vertical lines in the plot above. Mathematically, the vertical offset can be written as $\mid \hat y - y\mid$.
 
 So how do you find the line with the best fit? You may think that you have to try lots and lots of different lines to see which one fits best. Fortunately, this task is not as complicated as in may seem. Given some data points, the best-fit line always has a distinct slope and y-intercept that can be calculated using simple linear algebraic approaches. Let's quickly visit the required formulas.
 
@@ -130,7 +128,7 @@ $$\hat m = \rho \frac{S_Y}{S_X}$$
 This formula is also known as the **least squares method**.
 
 
-[You can visit this Wikipedia link](https://en.wikipedia.org/wiki/Simple_linear_regression#Fitting_the_regression_line) to get take a look into the maths behind derivation of this formula.
+[You can visit this Wikipedia link](https://en.wikipedia.org/wiki/Simple_linear_regression#Fitting_the_regression_line) to get take a look into the maths behind the derivation of this formula.
 
 The slope of the best-fit line can be a negative number following a negative correlation.  For example, if an increase in police officers is related to a decrease in the number of crimes in a linear fashion, the correlation and hence the slope of the best-fitting line in this particular setting is negative.
 
@@ -142,11 +140,11 @@ $$\bar{Y} = \hat c + \hat m \bar{X}$$
 $$ \hat c = \bar{Y} - \hat m\bar{X}$$
 
 
-Recall that $\bar{X}$ and $\bar{Y}$ are the mean values for variables X and Y.  So, in order to calculate the $\hat y$-intercept of the best-fit line, we start by finding the slope of the best-fit line using the above formula. Then to find the $\hat y$-intercept, we multiply slope value by mean of x and subtract the result from mean of y. 
+Recall that $\bar{X}$ and $\bar{Y}$ are the mean values for variables X and Y.  So, in order to calculate the $\hat y$-intercept of the best-fit line, we start by finding the slope of the best-fit line using the above formula. Then to find the $\hat y$-intercept, we multiply the slope value by the mean of x and subtract the result from the mean of y. 
 
 ## Predicting from the model
 
-As mentioned before, when you have a regression line with defined parameters slope and intercept as calculated above, you can easily predict the $\hat{y}$ (target) value for a new $x$ (feature) value using the estimated parameter values:
+As mentioned before, when you have a regression line with defined parameters for slope and intercept as calculated above, you can easily predict the $\hat{y}$ (target) value for a new $x$ (feature) value using the estimated parameter values:
 
 $$\hat{y} = \hat mx + \hat c$$
 
