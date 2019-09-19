@@ -8,7 +8,7 @@ Regression analysis is often the first real "learning algorithm" that aspiring d
 You will be able to:
 
 * Describe statistical modeling with simple regression 
-* Explain simple linear regression analysis as solving for straight line equation: $y=mx+c$
+* Explain simple linear regression analysis as solving for straight-line equation: $y=mx+c$
 * Calculate the slope and y-intercept given a set of data points
 * Calculate a regression line based on calculated slope and intercept
 * Predict a target value for a previously unseen input feature, based on model coefficients
@@ -32,17 +32,17 @@ We can use a linear regression analysis here to predict foot size (dependent var
 
 ### Why "linear" regression?
 
-The term **linear** implies that the model functions along with a straight (or nearly straight) line. **Linearity**, one of the assumptions of this approach, suggests that the relationship between dependent and independent variable can be expressed as a straight line. 
+The term **linear** implies that the model functions along with a straight (or nearly straight) line. **Linearity**, one of the assumptions of this approach, suggests that the relationship between dependent and independent variables can be expressed as a straight line. 
 
 **Simple Linear Regression** uses a single feature (one independent variable) to model a linear relationship with a target (the dependent variable) by fitting an optimal model (i.e. the best straight line) to describe this relationship.  
 
-**Multiple Linear Regression** uses more than one features to predict a target variable by fitting the best linear relationship. 
+**Multiple Linear Regression** uses more than one feature to predict a target variable by fitting the best linear relationship. 
 
 In this section, we will mainly focus on simple regression to build a sound understanding. For the example shown above i.e. height vs foot size, a simple linear regression model would fit a line to the data points as follows:
 
 <img src="images/heightfoot2.png" width="450">
 
-This line can then be used to describe the data and conduct further experiments using this fitted model. So let's move on and see how to calculate this "best fit line" in a simple linear regression context 
+This line can then be used to describe the data and conduct further experiments using this fitted model. So let's move on and see how to calculate this "best-fit line" in a simple linear regression context 
 
 ## Calculating Regression Coefficients: Slope and Intercepts
 
@@ -125,7 +125,7 @@ With the above ingredients in hand, we can calculate the slope (shown as $b$ bel
 
 $$\hat m = \rho \frac{S_Y}{S_X}$$
 
-This formula is also known as the **least squares method**.
+This formula is also known as the **least-squares method**.
 
 
 [You can visit this Wikipedia link](https://en.wikipedia.org/wiki/Simple_linear_regression#Fitting_the_regression_line) to get take a look into the maths behind the derivation of this formula.
@@ -161,6 +161,6 @@ Visit the following series of blogs by Bernadette Low for details on topics cove
 
 ## Summary 
 
-In this lesson, You learned the basics of simple linear regression between two variables as a problem of fitting a straight line to best describe the data associations on a 2-dimensional plane.
+In this lesson, you learned the basics of a simple linear regression between two variables as a problem of fitting a straight line to best describe the data associations on a 2-dimensional plane.
 
 
