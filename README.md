@@ -2,31 +2,28 @@
 # Simple Linear Regression 
 
 ## Introduction
-Regression analysis is often the first real "learning algorithm" that aspiring data scientists will come across. It is one of the simplest algorithms to master, but it still requires some mathematical and statistical understanding of the underlying regression process. This lesson will introduce you to the regression process based on the statistical ideas we have discovered so far. 
+Regression analysis is often the first real learning application that aspiring data scientists will come across. It is one of the simplest techniques to master, but it still requires some mathematical and statistical understanding of the underlying process. This lesson will introduce you to the regression process based on the statistical ideas we have discovered so far. 
 
 ## Objectives
 You will be able to:
 
-* Describe statistical modeling with simple regression 
-* Explain simple linear regression analysis as solving for straight-line equation: $y=mx+c$
-* Calculate the slope and y-intercept given a set of data points
-* Calculate a regression line based on calculated slope and intercept
-* Predict a target value for a previously unseen input feature, based on model coefficients
+* Perform a linear regression using self-constructed functions
+* Interpret the parameters of a simple linear regression model in relation to what they signify for specific data
 
 ## Linear Regression
 
-Regression analysis is one of the most important statistical techniques for business applications. It’s a statistical methodology that helps estimate the strength and direction of the relationship between two (or more variables). Regression results show whether the relationship is valid or not. It also helps to _predict_ an unknown value based on the derived relationship.
+Regression analysis is one of the most important statistical techniques for business applications. It’s a statistical methodology that helps estimate the strength and direction of the relationship between two (or more) variables. Regression results show whether the relationship is valid or not. It also helps to _predict_ an unknown value based on the derived relationship.
 
-> Regression Analysis is a __parametric__ technique used to **predict** the value of an unknown target variable (or dependent variable) $y$ based on one or more of known input features (or independent variables, predictors), often denoted by $x$. 
+> Regression Analysis is a __parametric__ technique meaning a set of parameters are used to **predict** the value of an unknown target variable (or dependent variable) $y$ based on one or more of known input features (or independent variables, predictors), often denoted by $x$. 
 
 
 Let's consider another example. Someone's height and foot size are generally considered to be related. Generally speaking, taller people tend to have bigger feet (and, obviously, shoe size).
 
 <img src="images/heightfoot1.png" width="450">
 
-We can use a linear regression analysis here to predict foot size (dependent variable), given height (independent variable) of an individual. Regression is proven to give credible results if the data follows standard parametric assumptions like normality, linearity etc. These will be covered in upcoming lessons in detail. In general, regression analysis helps us in the following ways:
+We can use a linear regression analysis here to predict foot size (dependent variable), given height (independent variable) of an individual. Regression is proven to give credible results if the data follows some assumptions which will be covered in upcoming lessons in detail. In general, regression analysis helps us in the following ways:
 
-* Finding an **association** or relationship between certain phenomenons or variables
+* Finding an **association** or relationship between certain phenomena or variables
 * Identifying **which variables contribute** more towards the outcomes
 * **Prediction** of future observations
 
@@ -42,7 +39,7 @@ In this section, we will mainly focus on simple regression to build a sound unde
 
 <img src="images/heightfoot2.png" width="450">
 
-This line can then be used to describe the data and conduct further experiments using this fitted model. So let's move on and see how to calculate this "best-fit line" in a simple linear regression context 
+This line can then be used to describe the data and conduct further experiments using this fitted model. So let's move on and see how to calculate this "best-fit line" in a simple linear regression context. 
 
 ## Calculating Regression Coefficients: Slope and Intercepts
 
@@ -66,8 +63,7 @@ You may come across other ways of expressing this straight line equation for sim
 
 **Linear regression is simply a manifestation of this simple equation!** So this is as complicated as our linear regression model gets. The equation here is the same one used to find a line in algebra, but in statistics, the actual data points don't necessarily lie on a line!
 
-
->The real challenge for regression analysis is to fit a line, out of an infinite number of lines that best describes that data.
+>The real challenge for regression analysis is to fit a line, out of an infinite number of lines that best describes the data.
 
 Consider the line below to see how we calculate slope and intercept.
 
@@ -128,7 +124,7 @@ $$\hat m = \rho \frac{S_Y}{S_X}$$
 This formula is also known as the **least-squares method**.
 
 
-[You can visit this Wikipedia link](https://en.wikipedia.org/wiki/Simple_linear_regression#Fitting_the_regression_line) to get take a look into the maths behind the derivation of this formula.
+[You can visit this Wikipedia link](https://en.wikipedia.org/wiki/Simple_linear_regression#Fitting_the_regression_line) to get take a look into the math behind the derivation of this formula.
 
 The slope of the best-fit line can be a negative number following a negative correlation.  For example, if an increase in police officers is related to a decrease in the number of crimes in a linear fashion, the correlation and hence the slope of the best-fitting line in this particular setting is negative.
 
@@ -150,7 +146,7 @@ $$\hat{y} = \hat mx + \hat c$$
 
 Remember that the difference between y and $\hat{y}$ is that $\hat{y}$ is the value predicted by the fitted model, whereas $y$ carries actual values of the variable (called the truth values) that were used to calculate the best fit. 
 
-Next, let's move on and try to code these equations in to draw a regression line to a simple dataset to see all of this in action. 
+Next, let's move on and try to code these equations to fit a regression line to a simple dataset to see all of this in action. 
 
 ## Additional Reading 
 
@@ -161,6 +157,4 @@ Visit the following series of blogs by Bernadette Low for details on topics cove
 
 ## Summary 
 
-In this lesson, you learned the basics of a simple linear regression between two variables as a problem of fitting a straight line to best describe the data associations on a 2-dimensional plane.
-
-
+In this lesson, you learned the basics of a simple linear regression. Specifically, you learned some details about performing the actual technique and got some practice interpreting regression parameters. Finally, you saw how the parameters can be used to make predictions!
